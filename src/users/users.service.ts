@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
@@ -10,10 +9,11 @@ export class UsersService {
     gender: string;
     isMarried: boolean;
   }[] = [
-    { id: 1, name: 'Jayanta', age: 32, gender: 'mail', isMarried: false },
-    { id: 2, name: 'Robin', age: 30, gender: 'mail', isMarried: false },
-    { id: 3, name: 'Sagor', age: 25, gender: 'mail', isMarried: false },
-    { id: 4, name: 'Mou', age: 22, gender: 'femail', isMarried: false },
+    { id: 1, name: 'Jayanta', age: 32, gender: 'male', isMarried: false },
+    { id: 2, name: 'Robin', age: 30, gender: 'male', isMarried: false },
+    { id: 3, name: 'Sagor', age: 25, gender: 'male', isMarried: false },
+    { id: 4, name: 'Mou', age: 22, gender: 'female', isMarried: false },
+    { id: 5, name: 'Tinku', age: 27, gender: 'male', isMarried: true },
   ];
 
   create(user: {

@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -30,7 +31,15 @@ export class UsersController {
   }
 
   @Get()
-  findAll() {
+  findAll(@Query() query: any) {
+    console.log(query);
+
+    if (query.gender) {
+      return this.usersService
+        .findAll()
+        .filter((user) => user.gender === query.gender);
+    }
+
     return this.usersService.findAll();
   }
 
@@ -40,8 +49,18 @@ export class UsersController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.usersService.update(+id, updateUserDto);
+  update(
+    @Param('id') id: string,
+    @Body()
+    user: {
+      id: number;
+      name: string;
+      age: number;
+      gender: string;
+      isMarried: boolean;
+    },
+  ) {
+    return this.usersService.update(+id, user);
   }
 
   @Delete(':id')
