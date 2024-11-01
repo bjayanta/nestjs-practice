@@ -1,12 +1,11 @@
-# REST API
+# Controller
 
-Main 6 principal: 
+### How to create controller?
+```bash
+> nest g controller [name]
 
-1. Client-Server Architecture
-2. Stateless
-3. Cacheable
-4. Layered System
-5. Uniform Interface
-6. Code on demand (Optional)
+or 
 
+> nest g resource [name]
+```
 Thank you.
