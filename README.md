@@ -1,11 +1,8 @@
-# Controller
+# Route
 
-### How to create controller?
-```bash
-> nest g controller [name]
+### Topics
 
-or 
+- What is route?
+- What is route decorator?
 
-> nest g resource [name]
-```
 Thank you.
