@@ -1,11 +1,12 @@
-# Create a Module
+# REST API
 
-```bash
-> nest g module [name]
+Main 6 principal: 
 
-or 
-
-> nest g resource [name]
-```
+1. Client-Server Architecture
+2. Stateless
+3. Cacheable
+4. Layered System
+5. Uniform Interface
+6. Code on demand (Optional)
 
 Thank you.
